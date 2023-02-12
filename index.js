@@ -10,7 +10,7 @@ const cors = require('cors')
 const router = require('./configs/routers/app')
 
 mongoose.connect(dburi)
-.then(()=>{console.log('connected')})
+.then(()=>{})
 .catch((e)=>{console.log(e)})
 
 app.use(express.json())
@@ -19,6 +19,4 @@ app.use(router)
 
 
 
-app.listen(PORT, ()=>{
-    console.log((PORT))
-})
+app.listen(PORT, ()=>{})

@@ -13,19 +13,21 @@ router.post('/api/signup', credentials.signUp)
 router.delete('/api/deleteuser', credentials.deleteUser)
 
 
-router.post('/api/addtocart', checkout.addToCart)
+router.put('/api/addtocart', checkout.addToCart)
 
 
-router.post('/api/addtofavourites', checkout.addToFavourites)
+router.put('/api/addtofavourites', checkout.addToFavourites)
 
 
-router.post('/api/removefromcart', checkout.removeFromCart)
+router.put('/api/removefromcart', checkout.removeFromCart)
 
+router.put('/api/removecart', checkout.removeCart)
 
-router.post('/api/removefromfavourites', checkout.removeFromFavourites)
+router.put('/api/removefromfavourites', checkout.removeFromFavourites)
 
+router.put('/api/removefavourites', checkout.removeFavourites)
 
-router.post('/api/checkout', checkout.checkout)
+router.put('/api/checkout', checkout.checkout)
 
 
 router.get('/api/getproducts', product.getProducts)

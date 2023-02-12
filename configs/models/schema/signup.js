@@ -9,6 +9,9 @@ const signUpSchema = mongoose.Schema({
     confirm_password: String,
     phone_no: Number,
     authority: String,
+    cart: Array,
+    favourites: Array,
+    checkouts: Array,
     token: String
 })
 

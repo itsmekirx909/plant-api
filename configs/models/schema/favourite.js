@@ -4,7 +4,8 @@ const favProductSchema = mongoose.Schema({
     fav_product_name: String,
     fav_product_description: String,
     fav_product_image: String,
-    fav_product_price: Number
+    fav_product_price: Number,
+    user_id: String
 })
 
 const favProductModel = mongoose.model('favProduct', favProductSchema)

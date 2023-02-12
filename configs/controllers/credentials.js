@@ -35,6 +35,9 @@ req.body.authority = 'User'
             email: email,
             password: hashedPassword,
             phone_no: phoneNo,
+            cart: [],
+            favourites: [],
+            checkouts: [],
             authority: req.body.authority
         }
 
@@ -112,7 +115,6 @@ if(!data){
     if(comparePassword){
 
 const userVerify = await jwt.verify(data.token, process.env.SECRET_KEY)
-console.log(userVerify)
 
         res.json({
             message: `Welcome ${data.username}`,
